@@ -1,0 +1,132 @@
+.news {
+    margin-bottom: 30px;
+    @media ($tab2) {
+        float: left;
+        width: 48%;
+    }
+    @media ($desc1) {
+        width: 100%;
+        float: none;
+    }
+    &__title {
+        @include block-title;
+    }
+    &__wrap {
+        padding: 10px 0 0 18px;
+        border-radius: 3px;
+        background: #321e66;
+    }
+    &__item {
+        position: relative;
+        padding: 20px 0;
+        background: #321e66;
+        &::before, &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 95%;
+            height: 1px;
+        }
+        &::before {
+            bottom: 0;
+            background: #28165d;
+        }
+        &::after {
+            bottom: 2px;
+            background: #3d2872;
+        }
+    }
+    &__img-wrap {
+        display: inline-block;
+        vertical-align: top;
+        margin: 4px 20px 0 0;
+        img {
+            transition: all .3s;
+        }
+        &:hover {
+            img {
+                box-shadow: 0 0 5px 1px #fff;
+            }
+        }
+    }
+    &__text-wrap {
+        display: inline-block;
+        width: 66%;
+    }
+    &__name {
+        display: inline-block;
+        margin-bottom: 4px;
+        color: $blue-color;
+        font-size: 16px;
+        text-decoration: none;
+        span {
+            transition: all .3s;
+        }
+        &:hover {
+            text-decoration: none;
+            span {
+                box-shadow: 0 6px 8px -5px;
+            }
+        }
+    }
+    &__date {
+        font-size: 14px;
+        color: #847ece;
+    }
+    &__bottom-link-wrap {
+        text-align: center;
+        padding-right: 20px;
+    }
+    &__bottom-link {
+        position: relative;
+        display: inline-block;
+        padding: 14px 20px 20px 20px;
+        color: $blue-color;
+        text-decoration: none;
+        &::before, &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 2px;
+            background: $blue-color;
+            right: 8px;
+        }
+        &::before {
+            transform: rotate(45deg);
+            top: 20px;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            top: 26px;
+        }
+    }
+}
+
+.game-page {
+    @media ($desc1) {
+        .news {
+            width: 68%;
+            float: right;
+            &__item {
+                width: 48%;
+                float: left;
+            }
+        }
+    }
+    @media ($desc2) {
+        .news {
+            width: 73%;
+        }
+    }
+}
+
+.news-and-promo-wrapper {
+    @include clearfix;
+    @media ($desc1) {
+        width: 32%;
+    }
+    @media ($desc2) {
+        width: 28%;
+    }
+}

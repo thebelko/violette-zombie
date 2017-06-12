@@ -1,0 +1,40 @@
+mixin header(data)
+
+    +b.HEADER.header
+        .container
+            +b.A(href="/").main-logo
+                picture
+                    +e.IMG(src="static/img/general/logo.png" srcset="static/img/general/logo2.png 2x").img
+            +b.nav
+                +e.DIV.mob-text
+                    +e.SPAN.open
+                +e.NAV.inner-wrap
+                    +e.UL.list
+                        +e.LI.item
+                            +e.A(href="#").link Главная
+                        +e.LI.item
+                            +e.A(href="#").link Азартные игры
+                        +e.LI.item
+                            +e.A(href="#").link Слоты
+                        +e.LI.item
+                            +e.A(href="#").link Рулетка
+                        +e.LI.item
+                            +e.A(href="#").link Игровые аппараты
+                        +e.LI.item
+                            +e.A(href="#").link Новости
+                        +e.LI.item
+                            +e.A(href="#").link Автоматы на деньги
+                        +e.LI.item
+                            +e.A(href="#").link Автоматы 777
+                        +e.LI.item
+                            +e.A(href="#").link Автоматы бесплатно
+                        +e.LI.item
+                            +e.A(href="#").link Новые автоматы
+                        +e.LI.item
+                            +e.A(href="#").link Автоматы на мобильный
+                +e.close-wrap
+                    +e.SPAN.close
+
+            +b.branding-btns
+                +e.A(href="/play").link Играть в So many monsters
+                +e.A(href="/play").link Играть в Zombirthday

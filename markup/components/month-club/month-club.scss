@@ -1,0 +1,65 @@
+.month-club {
+    border-bottom: 2px solid #40206c;
+    position: relative;
+    &__title-wrap {
+        background: #1e0f3a;
+        border-bottom: 1px solid #321958;
+    }
+    &__title-text {
+        padding-top: 20px;
+        @include block-title;
+        @media ($tab2) {
+            position: absolute;
+            left: calc(50% - 300px);
+        }
+    }
+    &__cont-wrap {
+        height: 522px;
+        background: #00052e url(../img/general/month-club-img.jpg) no-repeat center top;
+        @media ($tab1) {
+            height: 232px;
+            background: #02052e;
+            background: url(../img/general/month-club-img-tab1.jpg) no-repeat center top, linear-gradient(to right, #02052e, #2d143b);
+        }
+        @media ($tab2) {
+            background: #00052e url(../img/general/month-club-img-tab2.jpg) no-repeat center top;
+        }
+    }
+    &__text-block {
+        padding-top: 392px;
+        text-align: center;
+        @media ($tab1) {
+            padding-top: 114px;
+            float: left;
+        }
+        @media ($tab2) {
+            padding-top: 60px;
+            float: right;
+        }
+    }
+    &__white-text {
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    &__sum {
+        font-size: 24px;
+        color: #99cb11;
+        margin-bottom: 20px;
+    }
+    &__link {
+        display: inline-block;
+        padding: 12px 42px;
+        background-image: $linear-green;
+        text-decoration: none;
+        font-size: 18px;
+        color: #fff !important;
+        border-radius: 3px;
+        transition: all .3s;
+        &:hover {
+            background-image: $linear-green-hover;
+            box-shadow: 0 0 4px 2px #fff;
+            text-decoration: underline;
+        }
+    }
+}

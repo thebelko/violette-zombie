@@ -1,0 +1,40 @@
+mixin clubs(data)
+    +b.SECTION.clubs
+        .container
+            +e.title Рейтинг игровых клубов
+            +e.wrapper
+                - for (var i=0; i<5; i++)
+                    +b.one-club
+                        +e.number 1
+                        +e.A(href="#").logo
+                            IMG(src="static/img/content/club-logo.png")
+                        +e.A(href="#").title Club name
+                        +e.stars
+                        +e.sum-wrap
+                            +e.sum 5 000 000 руб
+                            +e.text выигрышей в месяц
+                        +e.A(href="#").link Посетить клуб
+                +e.DIV.more
+                    SPAN Развернуть
+
+
+mixin clubs-for-game(data)
+    +b.SECTION.clubs
+
+            +e.title Рекомендуемые клубы для этого слота
+            +e.wrapper
+                - for (var i=0; i<5; i++)
+                    +b.one-club
+                        +e.number 1
+                        +e.A(href="#").logo
+                            IMG(src="static/img/content/club-logo.png")
+                        +e.A(href="#").title Club name
+                        +e.stars
+                        +e.sum-wrap
+                            +e.sum 5 000 000 руб
+                            +e.text выигрышей в месяц
+                        +e.A(href="#").link Играть на деньги
+                +e.DIV.more
+                    SPAN Развернуть
+                    
+

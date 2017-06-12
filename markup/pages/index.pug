@@ -1,0 +1,50 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../../bemto/bemto
+    include ../components/head/head.pug
+    include ../components/header/header
+    include ../components/footer/footer.pug
+    include ../components/clubs/clubs
+    include ../components/now-win/now-win
+    include ../components/vitrina/vitrina
+    include ../components/slot-of-the-day/slot-of-the-day
+    include ../components/month-club/month-club
+    include ../components/news/news
+    include ../components/pre-text-promo/pre-text-promo
+    include ../components/text-block/text-block
+    include ../components/trust/trust
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+
+        +header()
+
+        +clubs()
+
+        .big-bg-wrap
+            .container
+                +now-win()
+                +vitrina()
+                +slot-of-the-day()
+
+        +month-club()
+
+        .big-bg-wrap
+            .container.container--news
+                .news-and-promo-wrapper
+                    +news()
+                    +pre-text-promo()
+                +text-block()
+        +trust()
+
+        +footer()
+
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

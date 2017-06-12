@@ -1,0 +1,22 @@
+mixin pre-text-promo(data)
+    +b.pre-text-promo
+        +e.img-wrap
+            img(src="static/img/content/pre-text-img-logo.png")
+        +e.text-wrap
+            +e.A(href="#").link Получить бонус
+
+
+mixin pre-text-promo-till-desc1(data)
+    +b.pre-text-promo.pre-text-promo-desc-hidden
+        +e.img-wrap
+            img(src="static/img/content/pre-text-img-logo.png")
+        +e.text-wrap
+            +e.A(href="#").link Получить бонус
+
+
+mixin pre-text-promo-desc2(data)
+    +b.pre-text-promo.pre-text-promo-desc-visible
+        +e.img-wrap
+            img(src="static/img/content/pre-text-img-logo.png")
+        +e.text-wrap
+            +e.A(href="#").link Получить бонус

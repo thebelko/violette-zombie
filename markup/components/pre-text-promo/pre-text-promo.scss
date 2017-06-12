@@ -1,0 +1,91 @@
+.pre-text-promo {
+    background: #321e66 url(../img/general/pre-text-promo-bg.jpg) center top no-repeat;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    @media ($tab2) {
+        float: right;
+        width: 48%;
+    }
+    @media ($tab1) {
+        background-position: -30px top;
+        max-width: 548px;
+        margin: 0 auto 30px auto;
+    }
+    @media ($tab2) {
+        background-position: center top;
+        margin-top: 42px;
+    }
+    @media ($desc1) {
+        width: 100%;
+        float: none;
+    }
+    &__img-wrap {
+        padding-top: 14px;
+        text-align: center;
+        @media ($tab1) {
+            width: 245px;
+            display: inline-block;
+        }
+        @media ($tab2) {
+            width: auto;
+            display: block;
+        }
+    }
+    &__text-wrap {
+        padding: 94px 0 20px 0;
+        background: url(../img/general/pre-text-promo-text-bg.png) no-repeat center top;
+        text-align: center;
+        @media ($tab1) {
+            float: right;
+            margin-right: 8px;
+        }
+        @media ($tab2) {
+            float: none;
+            margin-right: 0;
+        }
+    }
+    &__link {
+        display: inline-block;
+        padding: 12px 42px;
+        background-image: $linear-green;
+        text-decoration: none;
+        font-size: 18px;
+        color: #fff !important;
+        border-radius: 3px;
+        transition: all .3s;
+        &:hover {
+            background-image: $linear-green-hover;
+            box-shadow: 0 0 4px 2px #fff;
+            text-decoration: underline;
+        }
+    }
+}
+
+.game-page {
+    @media ($desc1) {
+        .pre-text-promo {
+            float: left;
+            width: 30%;
+        }
+    }
+    @media ($desc2) {
+        .pre-text-promo {
+            width: 24%;
+        }
+    }
+    .pre-text-promo.pre-text-promo-desc-hidden {
+        @media ($desc1) {
+            margin-top: 0;
+        }
+        @media ($desc2) {
+            display: none;
+        }
+    }
+    .pre-text-promo.pre-text-promo-desc-visible {
+        display: none;
+        @media ($desc2) {
+            display: block;
+            margin-top: 0;
+        }
+    }
+}

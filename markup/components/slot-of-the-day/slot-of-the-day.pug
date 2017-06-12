@@ -1,0 +1,17 @@
+mixin slot-of-the-day(data)
+    +b.SECTION.slot-of-the-day
+        +e.title Прибыльный слот сегодня
+        +b.today-slot
+            +e.img-wrap
+                img(src="static/img/content/today-slot-logo.jpg")
+            +e.text-wrap
+                +e.slot-title-wrap
+                    +e.A(href="#").slot-title Riches of Cleopatra
+                    +e.slot-text-under-title от <a href="#">Клуба Вулкан</a>
+                +e.slot-cont-wrap
+                    +e.white-text Выигрыш сегодня
+                    +e.sum 14 578 руб
+                    +e.A(href="#").link Играть сейчас
+
+        +b.today-promo-img
+            +e.A(href="#").link Участвовать

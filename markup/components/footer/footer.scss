@@ -1,0 +1,26 @@
+.footer {
+    background: #00052e;
+    padding: 24px 0;
+    &__img-wrap {
+        display: inline-block;
+        margin-right: 10px;
+        @media ($desc1) {
+            margin-left: 36px;
+        }
+        @media ($desc2) {
+            margin-left: 144px;
+        }
+    }
+    &__text {
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 20px;
+        color: #847ece;
+        a {
+            color: #847ece;
+        }
+        p {
+            margin: 2px 0;
+        }
+    }
+}

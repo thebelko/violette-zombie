@@ -1,0 +1,115 @@
+.text-block {
+    position: relative;
+    padding: 20px 20px 60px 20px;
+    margin-bottom: 30px;
+    background: #321e66;
+    border-radius: 3px;
+    clear: both;
+    @media ($tab1) {
+        padding: 20px;
+    }
+    @media ($desc1) {
+        clear: none;
+        width: 66%;
+        margin-top: 42px;
+        order: 2;
+    }
+    @media ($desc2) {
+        width: 70%;
+    }
+    h1 {
+        color: #684fff;
+        font-size: 26px;
+        line-height: 30px;
+        margin: 20px 0 10px 0;
+    }
+    h2 {
+        font-size: 20px;
+        line-height: 24px;
+        color: #684fff;
+        margin: 20px 0 10px 0;
+    }
+    h3, h4 {
+        font-size: 16px;
+        line-height: 20px;
+        color: #684fff;
+        margin: 20px 0 10px 0;
+    }
+    p {
+        margin: 10px 0;
+        color: #fff;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    ul {
+        color: #fff;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 0;
+        list-style: none;
+        li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            &::before, &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 10px;
+                height: 2px;
+                background: #99cb11;
+            }
+            &::before {
+                left: 2px;
+                transform: rotate(45deg);
+                width: 7px;
+                top: 12px;
+            }
+            &::after {
+                width: 10px;
+                left: 6px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    ol {
+        padding-left: 20px;
+        li {
+            margin-bottom: 10px;
+            padding-left: 6px;
+        }
+    }
+}
+
+.text-block-club-link {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 12px 56px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    background-image: $linear-green;
+    transition: all .3s;
+    &:hover {
+        text-decoration: underline;
+        background-image: $linear-green-hover;
+        box-shadow: 0 0 4px 2px #fff;
+    }
+}
+
+.game-page {
+    @media ($desc1) {
+        .text-block {
+            width: 68%;
+            float: right;
+            margin-top: 0;
+        }
+    }
+    @media ($desc2) {
+        .text-block {
+            width: 73%;
+        }
+    }
+}

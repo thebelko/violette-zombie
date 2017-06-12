@@ -1,0 +1,12 @@
+mixin now-win(data)
+    +b.SECTION.now-win
+        +e.title Сейчас выигрывают
+        +e.slider-wrap
+            -for (var i=0; i<8; i++)
+                +e.slide
+                    +e.slide-left
+                        +e.img(src="static/img/content/now-win-img.png")
+                    +e.slide-right
+                        +e.A(href="#").game Ghost Pirates
+                        +e.name Sharam
+                        +e.sum 1800 руб.
